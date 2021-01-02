@@ -33,6 +33,7 @@ export default {
             enabled: false
           },          
         },
+        colors: ["#247ba0"],
         dataLabels: {
           enabled: false
         },

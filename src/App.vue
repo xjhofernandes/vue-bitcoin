@@ -38,7 +38,7 @@ export default {
   height: 85px;
   margin-bottom: 60px;
   color: white;
-  background: black;
+  background: #50514F;
 }
 
 .head p{
