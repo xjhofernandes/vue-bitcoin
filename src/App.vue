@@ -12,45 +12,28 @@
     </div>
   </section>
 
-<div class="columns p-6">
+  <div class="columns p-6">
 
-  <div class="column has-background-grey-light">
-    <div class="control">
-  <input class="input" type="text" placeholder="Normal input">
-</div>
-    <div class="columns">
-      <div class="column is-one-quarter">
-        <input class="input is-rounded" type="text" value="1">
-      </div>
-      <div class="is-one-quarter select">      
-        <select>
-          <option>Bitcoin</option>
-          <option>Dolar</option>
-        </select>
-      </div>
-      <div class="column is-one-quarter">      
-        <input class="input is-rounded" type="text" value="32,000">
-      </div>
-      <div class="column is-one-quarter">      
-        <input class="input is-rounded" type="text" value=" R$" disabled>
-      </div>
+    <div class="column is-two-fifths">
+      <p class="is-primary">
+        <img class="" id="svg" alt="Vue" src="./assets/Investing.svg">
+      </p>
+    </div>
+    
+    <div class="column">
+      <HelloWorld />
     </div>
   </div>
-  
-  <div class="column">
-    <HelloWorld />
-  </div>
-</div>
 
-<div class="columns is-centered ">
-  <div class="column is-one-third">
-    <p class="is-primary">
-      <img class="" id="svg" alt="Vue" src="./assets/Investing.svg">
+<footer class="footer has-background-dark">
+  <div class="content has-text-centered">
+    <p class="has-text-white">
+      <strong class="has-text-white">Site</strong> by <a href="https://jhofernandes.dev">Jonathan Fernandes</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
     </p>
   </div>
-</div>
-
-  
+</footer>
 </template>
 
 <script>
