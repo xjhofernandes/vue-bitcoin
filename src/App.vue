@@ -1,19 +1,56 @@
 <template>
-  <nav class="bg-gray-900">
-    <div class="relative flex items-center justify-between h-16">
-      <p class="text-white text-center text-2xl">Bitcoin Home</p> 
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Bitcoin Checker
+        </h1>
+        <h2 class="subtitle">
+          Value of bitcoin
+        </h2>
+      </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <div class="flex justify-between px-24 pt-8">
-    <div class="">
-      <img class="h-96" alt="Vue" src="./assets/Investing.svg">
-    </div>
-    <div class="">
-      <HelloWorld />
+<div class="columns p-6">
+
+  <div class="column has-background-grey-light">
+    <div class="control">
+  <input class="input" type="text" placeholder="Normal input">
+</div>
+    <div class="columns">
+      <div class="column is-one-quarter">
+        <input class="input is-rounded" type="text" value="1">
+      </div>
+      <div class="is-one-quarter select">      
+        <select>
+          <option>Bitcoin</option>
+          <option>Dolar</option>
+        </select>
+      </div>
+      <div class="column is-one-quarter">      
+        <input class="input is-rounded" type="text" value="32,000">
+      </div>
+      <div class="column is-one-quarter">      
+        <input class="input is-rounded" type="text" value=" R$" disabled>
+      </div>
     </div>
   </div>
+  
+  <div class="column">
+    <HelloWorld />
+  </div>
+</div>
+
+<div class="columns is-centered ">
+  <div class="column is-one-third">
+    <p class="is-primary">
+      <img class="" id="svg" alt="Vue" src="./assets/Investing.svg">
+    </p>
+  </div>
+</div>
+
+  
 </template>
 
 <script>
@@ -27,34 +64,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: "Roboto";
   font-weight: 400;
 }
 
-/* .head{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85px;
-  margin-bottom: 60px;
-  color: white;
-  background: #50514F;
-}
-
-.head p{
-  font-size: 2em;
-  color: white;
-}
-
-.container{
-  padding-left: 15%;
-  padding-right: 15%;
-}
-
-.bitcoin{
-  height: 24em;
-  color: #2e86c1;
-} */
 </style>

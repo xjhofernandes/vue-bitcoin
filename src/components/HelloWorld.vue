@@ -1,7 +1,6 @@
 <template>
   <div class="chart">
     <apexchart
-      width="600"
       type="area"
       :options="chart.chartOptions"
       :series="chartSerie.series"
@@ -25,10 +24,10 @@ export default {
     const chart = reactive({
       chartOptions: {
         chart: {
+          width: '100%',
           id: "vuechart-example",
           type: 'area',
           stacked: false,
-          height: 400,
           zoom: {
             enabled: false
           },          
@@ -123,6 +122,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 
 </style>
