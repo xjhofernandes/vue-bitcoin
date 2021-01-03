@@ -33,7 +33,7 @@ export default {
             enabled: false
           },          
         },
-        colors: ["#16a085"],
+        colors: ["#02182B"],
         dataLabels: {
           enabled: false
         },
@@ -90,7 +90,7 @@ export default {
       let bitcointValues = valores.map(function(valor) {return valor['closing']});
       let bitCoinDate = valores.map(function(valor) {return Date.parse(valor['date'])});
 
-      const colors = ["#16a085"]; 
+      const colors = ["#02182B"]; 
 
       chart.chartOptions = {
         colors: [colors[Math.floor(Math.random() * colors.length)]],
@@ -124,10 +124,5 @@ export default {
 </script>
 
 <style scoped>
-
-.chart{
-  float: right;
-  background: white;
-}
 
 </style>

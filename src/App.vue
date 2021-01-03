@@ -1,11 +1,12 @@
 <template>
-  <div class="h-16 bg-gray-900 mb-8">
-    <!-- <img class="as" alt="Vue" src="./assets/bitcoin.svg"> -->
-    <p>Bitcoin Home</p> 
-  </div>
+  <nav class="bg-gray-900">
+    <div class="relative flex items-center justify-between h-16">
+      <p class="text-white text-center text-2xl">Bitcoin Home</p> 
+    </div>
+  </nav>
 
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <div class="flex justify-between px-24">
+  <div class="flex justify-between px-24 pt-8">
     <div class="">
       <img class="h-96" alt="Vue" src="./assets/Investing.svg">
     </div>
@@ -27,13 +28,10 @@ export default {
 </script>
 
 <style>
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 0px;
-} */
+#app {
+  font-family: "Roboto";
+  font-weight: 400;
+}
 
 /* .head{
   display: flex;
