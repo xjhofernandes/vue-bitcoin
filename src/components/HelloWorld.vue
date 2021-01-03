@@ -6,7 +6,10 @@
       :series="chartSerie.series"
     ></apexchart>
     <div>
-      <button @click="updateChart">Update!</button>
+      <button class="button mr-1" @click="updateChart">7 D</button>
+      <button class="button mr-1" @click="updateChart">1 M</button>
+      <button class="button mr-1" @click="updateChart">1 Y</button>
+      <button class="button mr-1" @click="updateChart">Max</button>
     </div>
   </div>
 </template>
