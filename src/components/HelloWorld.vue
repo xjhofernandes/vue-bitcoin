@@ -117,7 +117,14 @@ export default {
       return bitcoins
     }
 
-    return {updateChart, minhasbits, chart, chartSerie}
+    function write(){
+      console.log("hello, world");
+    }
+
+    return {updateChart, minhasbits, chart, chartSerie, write}
+  },
+  mounted(){
+    //this.updateChart();
   }
 }
 </script>
