@@ -6,8 +6,9 @@
           Bitcoin Checker
         </h1>
         <h2 class="subtitle">
-          Value of bitcoin
-        </h2>
+          A simple site to check the bitcoin price
+        </h2 >
+        
       </div>
     </div>
   </section>
@@ -29,8 +30,8 @@
   <div class="content has-text-centered">
     <p class="has-text-white">
       <strong class="has-text-white">Site</strong> by <a href="https://jhofernandes.dev">Jonathan Fernandes</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      Made in Vue + Bulma + FastApi
     </p>
   </div>
 </footer>
