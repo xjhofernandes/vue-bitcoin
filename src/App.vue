@@ -1,14 +1,18 @@
 <template>
-<div class="head">
-  <!-- <img class="as" alt="Vue" src="./assets/bitcoin.svg"> -->
-  <p>Bitcoin Home</p> 
-</div>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <div class="container">
-    <img class="bitcoin" alt="Vue" src="./assets/Investing.svg">
-    <HelloWorld />
+  <div class="h-16 bg-gray-900 mb-8">
+    <!-- <img class="as" alt="Vue" src="./assets/bitcoin.svg"> -->
+    <p>Bitcoin Home</p> 
   </div>
 
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <div class="flex justify-between px-24">
+    <div class="">
+      <img class="h-96" alt="Vue" src="./assets/Investing.svg">
+    </div>
+    <div class="">
+      <HelloWorld />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -31,7 +35,7 @@ export default {
   margin-top: 0px;
 } */
 
-.head{
+/* .head{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +51,6 @@ export default {
 }
 
 .container{
-  /* background: red; */
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -55,5 +58,5 @@ export default {
 .bitcoin{
   height: 24em;
   color: #2e86c1;
-}
+} */
 </style>
