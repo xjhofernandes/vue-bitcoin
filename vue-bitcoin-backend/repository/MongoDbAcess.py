@@ -1,5 +1,4 @@
-from mongoengine import connect
-from mongoengine import *
+from mongoengine import connect, Q
 import os
 
 USERNAME_MONGO = os.getenv('USERNAME_MONGO')

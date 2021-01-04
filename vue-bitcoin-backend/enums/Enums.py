@@ -1,9 +1,9 @@
 from enum import Enum
-from datetime import date
+from datetime import timedelta
 
 class Periods(Enum):
-   seven = 7
-   month = 30
-   sixmonth = 180
-   year = 360
-   max = 9999
+   seven = timedelta(days = 7)
+   month = timedelta(days = 30)
+   sixmonth = timedelta(days = 180)
+   year = timedelta(days = 360)
+   max = timedelta(days = 999)

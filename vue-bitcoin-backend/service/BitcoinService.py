@@ -1,21 +1,23 @@
 from model.BitcoinValues import BitcoinValues
 from repository.MongoDbAcess import MongoDbAcess
 from mongoengine import Q
-import datetime
+from datetime import date
 
 class BitcoinService(object):
     def __init__(self) -> None:
-        connection = MongoDbAcess()
-    
-    def period_filter(self):
-        return True
+        MongoDbAcess()
+
+    def filter_date_interval(self, start, end):
+        return BitcoinValues.objects.filter((Q(date__gte=start) & Q(date__lte=end)))   
+
+    def period_filter(self, period_start):
+        start = date.today() - period_start
+        end = date.today()
+        results = self.filter_date_interval(start, end)
+
+        return results.to_json()        
 
     def calendar_filter(self, start, end):
-        # start = datetime.datetime(2020, 12, 1)
-        # end = datetime.datetime(2020, 12, 31)
-        results = BitcoinValues.objects.filter((Q(date__gte=start) & Q(date__lte=end)))
-        return results.to_json()
+        results = self.filter_date_interval(start, end)
 
-    def teste_db(self):
-        print('tedsdste')
-        print(BitcoinValues.objects.count())
+        return results.to_json()      
