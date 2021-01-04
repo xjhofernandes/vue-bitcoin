@@ -1,3 +1,6 @@
-from pymongo import MongoClient
+from mongoengine import connect
 
-client = MongoClient('mongodb+srv://admin:bitadmin@cluster0.oyaw3.mongodb.net/test?authSource=admin&replicaSet=atlas-ai8to1-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true')
+class MongoDbAcess(object):
+    def __init__(self) -> None:
+        connect('bitcoin')
+        #connect('bitcoin', host='cluster0.oyaw3.mongodb.net', username='admin', password='bitadmin', authentication_source='admin')
