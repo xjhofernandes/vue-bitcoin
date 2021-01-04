@@ -1,12 +1,16 @@
-from model import BitcoinValues
-from repository import MongoDbAcess
+from model.BitcoinValues import BitcoinValues
+from repository.MongoDbAcess import MongoDbAcess
 
-connection = MongoDbAcess.MongoDbAcess()
+class BitcoinService(object):
+    def __init__(self) -> None:
+        connection = MongoDbAcess()
+    
+    def period_filter(self):
+        return True
 
-print(BitcoinValues.BitcoinValues.objects.count())
+    def calendar_filter(self):
+        return True
 
-def period_filter():
-    return True
-
-
-
+    def teste_db(self):
+        print('tedsdste')
+        print(BitcoinValues.objects.count())
