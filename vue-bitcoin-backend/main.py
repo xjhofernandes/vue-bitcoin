@@ -1,9 +1,8 @@
 from service.BitcoinService import BitcoinService
+from model.RequestBody import RequestBody
 from enums.Enums import Periods
-from typing import Optional
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from pydantic import BaseModel
 
 
 # teste = BitcoinService()
@@ -16,6 +15,7 @@ from pydantic import BaseModel
 # caramba = teste.period_filter(Periods[nome].value)
 # print(caramba)
 app = FastAPI()
+bit_service = BitcoinService()
 
 origins = [
     "*",
@@ -30,22 +30,16 @@ app.add_middleware(
 )
 
 
-class Item(BaseModel):
-    name: str
-    price: float
-    is_offer: Optional[bool] = None
-
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
+@app.post("/updateChart/")
+async def update_chart(request: RequestBody):
+    result = bit_service.period_filter(Periods[request.period])
+    return result
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
 
-
-@app.put("/items/{item_id}")
-def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+@app.post("/updateChartByCalendar/")
+async def update_chart_by_calendar(request: RequestBody):
+    return result
