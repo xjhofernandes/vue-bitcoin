@@ -4,16 +4,6 @@ from enums.Enums import Periods
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 
-
-# teste = BitcoinService()
-
-# nome = 'seven'
-# print(Periods[nome].value)
-
-# # print(teste.calendar_filter(datetime.datetime(2020, 12, 1), datetime.datetime(2020, 12, 31)))
-
-# caramba = teste.period_filter(Periods[nome].value)
-# print(caramba)
 app = FastAPI()
 bit_service = BitcoinService()
 
@@ -29,17 +19,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
 @app.post("/updateChart/")
 async def update_chart(request: RequestBody):
-    result = bit_service.period_filter(Periods[request.period])
-    return result
+    period_start = Periods[request.period]
+    result = bit_service.period_filter(period_start)
 
+    return result
 
 @app.post("/updateChartByCalendar/")
 async def update_chart_by_calendar(request: RequestBody):
+    start = request.date_start
+    end = request.date_end
+    result = bit_service.calendar_filter(start, end)
+
     return result
