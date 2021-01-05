@@ -6,11 +6,11 @@
       :series="chartSerie.series"
     ></apexchart>
     <div>
-      <button class="button mr-1" @click="updateChart">7 D</button>
-      <button class="button mr-1" @click="updateChart">1 M</button>
-      <button class="button mr-1" @click="updateChart">6 M</button>
-      <button class="button mr-1" @click="updateChart">1 Y</button>
-      <button class="button mr-1" @click="updateChart">Max</button>
+      <button class="button mr-1" @click="updateChart('seven')">7 D</button>
+      <button class="button mr-1" @click="updateChart('month')">1 M</button>
+      <button class="button mr-1" @click="updateChart('sixmonths')">6 M</button>
+      <button class="button mr-1" @click="updateChart('year')">1 Y</button>
+      <button class="button mr-1" @click="updateChart('max')">Max</button>
     </div>
   </div>
 </template>
@@ -87,11 +87,11 @@ export default {
       ],
     });
 
-    async function updateChart() {
-      let valores = await minhasbits();
+    async function updateChart(periodValue) {
+      let valores = await requisicaoAPI(periodValue);
 
       let bitcointValues = valores.map(function(valor) {return valor['closing']});
-      let bitCoinDate = valores.map(function(valor) {return Date.parse(valor['date'])});
+      let bitCoinDate = valores.map(function(valor) {return valor['date'].$date});
 
       const colors = ["#02182B"]; 
 
@@ -109,26 +109,34 @@ export default {
       ];
     }
 
-    async function minhasbits(){
-      let bitcoins = [];
-      for (var i = 1; i <= 31; i++) {
-            let a = await fetch(`https://www.mercadobitcoin.net/api/BTC/day-summary/2020/12/${i}`)
-            .then(function(response) {
-            return response.json();
-            });
-            bitcoins.push(a)
-      }
-      return bitcoins
+    async function requisicaoAPI(periodValue) {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+        body: JSON.stringify({ period: periodValue})
+      };
+
+      let data = await fetch("http://127.0.0.1:8000/updateChart", requestOptions)
+        .then((response) => response.json())
+        .then(data => {
+            return data;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+        console.log(data);
+      return JSON.parse(data);
     }
+      
 
     function write(){
       console.log("hello, world");
     }
 
-    return {updateChart, minhasbits, chart, chartSerie, write}
+    return {updateChart, chart, chartSerie, write, requisicaoAPI}
   },
   mounted(){
-    //this.updateChart();
+    this.updateChart('month');
   }
 }
 </script>

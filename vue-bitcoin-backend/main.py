@@ -23,7 +23,7 @@ app.add_middleware(
 async def update_chart(request: RequestBody):
     period_start = Periods[request.period]
     result = bit_service.period_filter(period_start)
-
+    
     return result
 
 @app.post("/updateChartByCalendar/")
