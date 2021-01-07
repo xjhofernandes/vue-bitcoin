@@ -116,7 +116,7 @@ export default {
         body: JSON.stringify({ period: periodValue})
       };
 
-      let data = await fetch("http://127.0.0.1:1995/updateChart", requestOptions)
+      let data = await fetch("https://vue-bitcoin.herokuapp.com/updateChart", requestOptions)
         .then((response) => response.json())
         .then(data => {
             return data;
@@ -126,13 +126,8 @@ export default {
         });
       return JSON.parse(data);
     }
-      
-
-    function write(){
-      console.log("hello, world");
-    }
-
-    return {updateChart, chart, chartSerie, write, requisicaoAPI}
+    
+    return {updateChart, chart, chartSerie, requisicaoAPI}
   },
   mounted(){
     this.updateChart('month');
