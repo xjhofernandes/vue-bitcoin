@@ -116,7 +116,7 @@ export default {
         body: JSON.stringify({ period: periodValue})
       };
 
-      let data = await fetch("http://127.0.0.1:8000/updateChart", requestOptions)
+      let data = await fetch("http://127.0.0.1:1995/updateChart", requestOptions)
         .then((response) => response.json())
         .then(data => {
             return data;
@@ -124,7 +124,6 @@ export default {
         .catch(error => {
             console.error(error);
         });
-        console.log(data);
       return JSON.parse(data);
     }
       
