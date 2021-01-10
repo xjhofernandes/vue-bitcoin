@@ -1,24 +1,7 @@
-# vue-chart
+# BitVue
 
-## Project setup
-```
-npm install
-```
+![image](https://i.ibb.co/mhCQpGS/Captura-de-tela-de-2021-01-09-21-46-48.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+##### Simple bitcoin project made with Vue, Bulma & FastApi.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Backend : Python & MongoDB
