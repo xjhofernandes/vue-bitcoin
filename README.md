@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://bitcoin-vue.netlify.app"><h1>Bitcoin Checker </h1></a>
+  <a href="https://bitcoin-vue.netlify.app" target="_blank"><h1>Bitcoin Checker </h1></a>
 </p>
 
 #### A simple site to check the bitcoin price
@@ -12,5 +12,5 @@
 Backend : Python & MongoDB
 
 <p>
-  <a href="https://github.com/xjhofernandes/vue-bitcoin-backend">Backend Repository</a>
+  <a href="https://github.com/xjhofernandes/vue-bitcoin-backend" target="_blank">Backend Repository</a>
 </p>
