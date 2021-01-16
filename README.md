@@ -4,7 +4,7 @@
 </p>
 
 
-![image](https://i.ibb.co/mhCQpGS/Captura-de-tela-de-2021-01-09-21-46-48.png)
+![image](https://i.ibb.co/bvHTRXX/Captura-de-tela-de-2021-01-16-19-56-43.png)
 
 ##### Simple bitcoin project made with Vue, Bulma & FastApi.
 
