@@ -1,7 +1,8 @@
-# BitVue
 <p align="center">
-  <a href="https://bitcoin-vue.netlify.app">BitVue</a>
+  <a href="https://bitcoin-vue.netlify.app"><h1>Bitcoin Checker </h1></a>
 </p>
+
+#### A simple site to check the bitcoin price
 
 
 ![image](https://i.ibb.co/bvHTRXX/Captura-de-tela-de-2021-01-16-19-56-43.png)
